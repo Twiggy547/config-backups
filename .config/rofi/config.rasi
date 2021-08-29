@@ -1,0 +1,4 @@
+configuration {
+	theme: "~/.cache/wal/colors-rofi-dark";
+}
+@import "/usr/share/rofi/themes/Arc-Mantis-transparent.rasi"

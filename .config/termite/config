@@ -1,0 +1,82 @@
+[options]
+#https://github.com/thestinger/termite/blob/master/config
+allow_bold = true
+audible_bell = false
+browser = surf
+clickable_url = true
+cursor_blink = system
+cursor_shape = underline
+dynamic_title = true
+filter_unmatched_urls = true
+font = Monospace 11
+#font = Hack Bold 10
+geometry = 900x650
+highlight = #2f2f2f
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = false
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 50000
+size_hints = false
+search_wrap = true
+urgent_on_bell = true
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 10
+#roundness = 2.0
+
+############################################################
+#### There is a folder themes in ~/config/termite/themes
+############################################################
+#### https://terminal.sexy
+#### https://critical.ch/xterm/
+############################################################
+
+[colors]
+# Kimbie-Dark Theme
+
+# special
+foreground      = #c2a383
+foreground_bold = #c2a383
+cursor          = #c2a383
+background      = #221a0f
+
+# black
+color0  = #151515
+color8  = #505050
+
+# red
+color1  = #dc3958
+color9  = #f14a68
+
+# green
+color2  = #889b4a
+color10 = #a3b95a
+
+# yellow
+color3  = #f79a32
+color11 = #fcac51
+
+# blue
+color4  = #5f819d
+color12 = #4c96a8
+
+# magenta
+color5  = #7e5053
+color13 = #98676a
+
+# cyan
+color6  = #719190
+color14 = #8ab1b0
+
+# white
+color7  = #ae8545
+color15 = #d3a154
