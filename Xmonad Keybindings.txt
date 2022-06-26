@@ -1,0 +1,148 @@
+Xmonad Keybindings:
+
+--mod4Mask= super key
+--mod1Mask= alt key
+--controlMask= ctrl key
+--shiftMask= shift key
+
+myModMask = mod1Mask(alt-key)
+
+-- Set the window to floating mode and move by dragging
+   modMask + Left mouse click
+
+-- Raise the window to the top of the stack
+   modMask + Middle mouse click
+
+-- Set the window to floating mode and resize by dragging 
+   modMask + Right mouse click
+
+-- SUPER + FUNCTION KEYS
+
+   modMask + e    spawn $ "vim" 
+   modMask + d    spawn $ "dmenu" 
+   modMask + m    sendMessage $ Toggle NBFULL
+   modMask + f    spawn $ "pcmanfm"
+   modMask + h    spawn $ "htop task manager" 
+   modMask + r    spawn $ "ranger" 
+   modMask + v    spawn $ "pavucontrol" 
+   modMask + w    spawn $ "brave" 
+   modMask + Esc  spawn $ "xkill" 
+   modMask + Ent  spawn $ "kitty" 
+   modMask + F1   spawn $ "rofi -show run" 
+   modMask + F2   spawn $ "vim" 
+   modMask + F3   spawn $ "kitty -e nano" 
+   modMask + F4   spawn $ "geany" 
+   modMask + F5   spawn $ "vlc" 
+   modMask + F6   spawn $ "gimp" 
+   modMask + F7   spawn $ "xfce4-appfinder" 
+   modMask + F8   spawn $ "pcmanfm" 
+   modMask + F9   spawn $ "rofi-theme-slector" 
+   modMask + F10  spawn $ "arcolinux-tweak-tool" 
+   modMask + F11  spawn $ "toggle polybar" 
+   modMask + F12  spawn $ "toggle picom" 
+
+-- FUNCTION KEYS
+   F12, spawn $ "xfce4-terminal --drop-down" 
+ 
+-- SUPER + SHIFT KEYS
+
+   modMask + shiftMask , l    spawn $ "arcolinux-logout"
+   modMask + shiftMask , r    spawn $ "xmonad --recompile & xmonad --restart"
+   modMask + shiftMask , q    kill focused window
+   modMask + shiftMask , x    io exitWith ExitSuccess
+
+--SCREENSHOTS
+
+   Print_Key  spawn $ "scrot"
+
+--MULTIMEDIA KEYS (Disabled)
+
+  -- Mute volume
+  , ((0, xF86XK_AudioMute), spawn $ "amixer -q set Master toggle")
+
+  -- Decrease volume
+  , ((0, xF86XK_AudioLowerVolume), spawn $ "amixer -q set Master 5%-")
+
+  -- Increase volume
+  , ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
+
+  -- Increase brightness
+  , ((0, xF86XK_MonBrightnessUp),  spawn $ "xbacklight -inc 5")
+
+  -- Decrease brightness
+  , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
+
+--  , ((0, xF86XK_AudioPlay), spawn $ "mpc toggle")
+--  , ((0, xF86XK_AudioNext), spawn $ "mpc next")
+--  , ((0, xF86XK_AudioPrev), spawn $ "mpc prev")
+--  , ((0, xF86XK_AudioStop), spawn $ "mpc stop")
+
+  , ((0, xF86XK_AudioPlay), spawn $ "playerctl play-pause")
+  , ((0, xF86XK_AudioNext), spawn $ "playerctl next")
+  , ((0, xF86XK_AudioPrev), spawn $ "playerctl previous")
+  , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
+
+
+--------------------------------------------------------------------
+
+--  XMONAD LAYOUT KEYS
+
+  -- Cycle through the available layout algorithms.
+      modMask + Tab
+
+  -- Focus selected desktop (Next Workstation)
+      modMask + Space 
+
+  -- Focus selected desktop (Previous WS)
+      controlMask + mod1Mask, j   
+
+  -- Focus selected desktop (Next WS)
+      controlMask + mod1Mask, k  
+
+  --  Reset the layouts on the current workspace to default.
+      modMask + shiftMask, Tab
+
+  -- Move focus to the next window. (Down)
+      modMask, Left_Arrow
+
+  -- Move focus to the previous window.(Up)
+      modMask, Right_Arrow
+
+  -- Move focus to the master window.
+      modMask + shiftMask, m
+
+  -- Swap the focused window with the next window. (Down)
+      modMask + shiftMask, Down_Arrow  
+
+  -- Swap the focused window with the next window. (Down)
+      controlMask + modMask, j
+
+  -- Swap the focused window with the previous window. (Up)
+      modMask + shiftMask, Up_Arrow
+
+  -- Swap the focused window with the previous window. (Up)
+      controlMask + modMask, k
+
+  -- Shrink the master area.
+      controlMask + modMask, Left_Arrow
+
+  -- Expand the master area.
+      controlMask + modMask, Right_Arrow
+
+  -- Push window back into tiling.
+      modMask + shiftMask, t
+
+  -- Increment the number of windows in the master area.
+      controlMask + modMask, Left_Arrow
+
+  -- Decrement the number of windows in the master area.
+      controlMask + modMask, Right_Arrow
+
+-- MOVE AROUND WORKSPACES (Switch, MoveWindows)
+
+  -- Switch to workspace N
+      modMask [1..9]
+
+  -- Move client to workspace N
+      modMask + shiftMask [1..9]   
+
